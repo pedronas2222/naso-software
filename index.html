@@ -33,10 +33,10 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contato</a>
           </li>
         </ul>
-        <button type="button" class="rounded-pill btn-rounded">
+        <button type="button" class="rounded-pill btn-rounded" onclick="location.href='https://wa.me/5562991957693/?text=Olá,%20tenho%20interesse%20em%20um%20software%20personalizado.🎨'">
           (62) 99195-7693
           <span>
-            <i class="fas fa-whatsapp-alt"></i>
+            <i class="fa fa-robot"></i>
           </span>
         </button>
       </div>
@@ -165,15 +165,15 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
         <div class="services__content">
-          <div class="icon d-block fas fa-paper-plane"></div>
+          <div class="icon d-block fa fa-robot"></div>
           <h3 class="display-3--title mt-1">ChatBot Personalizado</h3>
           <p class="lh-lg">
             Conecte-se de forma única com seus clientes por meio de um chatbot exclusivo. 
             Transforme interações em experiências personalizadas e impulsione o engajamento em cada conversa. 
             Seu assistente virtual, moldado para atender às necessidades específicas do seu negócio
           </p>
-          <button type="button" class="rounded-pill btn-rounded border-primary">Saiba Mais
-            <span><i class="fas fa-arrow-right"></i></span>
+          <button type="button" class="rounded-pill btn-rounded border-primary" id="testeAoVivo">Teste ao Vivo
+            <span><i class="fas fa-paper-plane"></i></span>
           </button>
         </div>
       </div>
@@ -233,6 +233,16 @@
   </div>
 </section>
 
+
+
+<script>
+  document.getElementById('testeAoVivo').addEventListener('click', function() {
+    window.open('https://wa.me/5562991957693/?text=Teste%20Ao%20Vivo%20chatbot.', '_blank');
+  });
+</script>
+
+
+
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
                                START SECTION 5 - THE TESTIMONIALS  
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -255,8 +265,10 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                A NASO foi fundamental para transformar nossas ideias em realidade. 
+                Seu compromisso com a qualidade e a inovação é evidente em cada linha de código. 
+                Além disso, a flexibilidade e a capacidade de adaptação da equipe tornaram o processo suave. 
+                Recomendo a NASO para qualquer projeto de desenvolvimento de software.
                 <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -283,8 +295,10 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                Contratamos a NASO para desenvolver um sistema personalizado para nossa empresa e ficamos impressionados com a
+                 qualidade e a entrega no prazo. A equipe foi extremamente profissional, entendendo nossas necessidades e 
+                 fornecendo soluções inteligentes. Recomendo a NASO para quem busca serviços de desenvolvimento de 
+                 software de alta qualidade.
                 <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -301,8 +315,8 @@
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
-              <h3>Joy Marete</h3>
-              <p class="fw-light">Finance Manager</p>
+              <h3>Joana Matsudah</h3>
+              <p class="fw-light">Gerente Financeiro</p>
             </div>
           </div>     
           <!-- CAROUSEL ITEM 3 -->
@@ -311,8 +325,10 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                A NASO Software superou minhas expectativas em todos os aspectos. 
+                Desde o início do projeto até a implementação, a comunicação foi clara, e a equipe demonstrou grande expertise. 
+                Eles não apenas entregaram um sistema eficiente, mas também proporcionaram um suporte excepcional.
+                 Estamos muito satisfeitos com o resultado final.
                 <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -329,8 +345,8 @@
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
-              <h3>ClaireBelle Zawadi</h3>
-              <p class="fw-light">Global brand manager</p>
+              <h3>Clarice Ortega</h3>
+              <p class="fw-light">Consultoria de RH</p>
             </div>
           </div>     
           <!-- CAROUSEL ITEM 4 -->
@@ -339,8 +355,10 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                O trabalho da NASO em nossos últimos projetos foi excepcional. 
+                A abordagem personalizada e a atenção aos detalhes destacam-se. 
+                Eles não apenas desenvolvem software, mas também entendem o contexto de negócios por trás dele. 
+                Isso faz toda a diferença na entrega de soluções que realmente agregam valor.
                 <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -357,8 +375,8 @@
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
-              <h3>Uhuru Kenyatta</h3>
-              <p class="fw-light">C.E.O & Founder</p>
+              <h3>Fernando Lima</h3>
+              <p class="fw-light">CEO & Founder</p>
             </div>
           </div>     
         </div>
@@ -511,8 +529,8 @@
           <img src="images/portfolio/portfolio-1.jpg" alt="portfolio 1 image" title="portfolio 1 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 1</h4>
-              <p>category project</p>
+              <h4>CRONUS RH</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -522,8 +540,8 @@
           <img src="images/portfolio/portfolio-2.jpg" alt="portfolio 2 image" title="portfolio 2 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 2</h4>
-              <p>category project</p>
+              <h4>AURORA COTAÇÃO</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -533,8 +551,8 @@
           <img src="images/portfolio/portfolio-3.jpg" alt="portfolio 3 image" title="portfolio 3 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 3</h4>
-              <p>category project</p>
+              <h4>AURORA COTAÇÃO</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -544,8 +562,8 @@
           <img src="images/portfolio/portfolio-4.jpg" alt="portfolio 4 image" title="portfolio 4 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 4</h4>
-              <p>category project</p>
+              <h4>CRONUS CANDIDATO</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -555,8 +573,8 @@
           <img src="images/portfolio/portfolio-5.jpg" alt="portfolio 5 image" title="portfolio 5 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 5</h4>
-              <p>category project</p>
+              <h4>CALCULO DE CUSTO (CC19)</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -566,8 +584,8 @@
           <img src="images/portfolio/portfolio-6.jpg" alt="portfolio 6 image" title="portfolio 6 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 6</h4>
-              <p>category project</p>
+              <h4>NASO CRM</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -577,8 +595,8 @@
           <img src="images/portfolio/portfolio-7.jpg" alt="portfolio 7 image" title="portfolio 7 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 7</h4>
-              <p>category project</p>
+              <h4>CRONUS ISP ADMIN</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -588,19 +606,19 @@
           <img src="images/portfolio/portfolio-8.jpg" alt="portfolio 8 image" title="portfolio 8 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 8</h4>
-              <p>category project</p>
+              <h4>CRONUS IMOBILIÁRIA</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="portfolio-box shadow">
-          <img src="images/portfolio/portfolio-9.jpg" alt="portfolio 9 image" title="portfolio 9 picture" class="img-fluid">
+          <img src="images/portfolio/portfolio-9.png" alt="portfolio 9 image" title="portfolio 9 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>project name goes here 9</h4>
-              <p>category project</p>
+              <h4>CRONUS EMPREGADOR</h4>
+              <p>Desenvolvimento Web</p>
             </div>
           </div>
         </div>
@@ -649,21 +667,23 @@
       <div class="col-12 col-lg-6 bg-white shadow p-3">
         <div class="form w-100 pb-2">
           <h4 class="display-3--title mb-5">Inicie seu Projeto</h4>
-          <form action="#" class="row">
+          <form action="https://api.sheetmonkey.io/form/hjNXFXMykNGZSWLQpExDLb" method="post" class="row">
+              <input type="hidden" name="Canal" value="site-naso">
+              <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
             <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="Nome" id="inputFirstName" class="shadow form-control form-control-lg">
+              <input type="text" name="Name" placeholder="Nome" id="inputFirstName" class="shadow form-control form-control-lg">
             </div>
             <div class="col-lg-6 col-md mb-3">
-              <input type="number" placeholder="WhatsApp" id="inputLastName" class="shadow form-control form-control-lg">
+              <input type="number" name="WhatsApp" placeholder="WhatsApp" id="inputLastName" class="shadow form-control form-control-lg">
             </div>
             <div class="col-lg-12 mb-3">
-              <input type="email" placeholder="E-mail" id="inputEmail" class="shadow form-control form-control-lg">
+              <input type="email" name="Email" placeholder="E-mail" id="inputEmail" class="shadow form-control form-control-lg">
             </div>
             <div class="col-lg-12 mb-3">
-              <textarea name="message" placeholder="Conte-nos resumidamente sobre o seu projeto." id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+              <textarea name="Mensagem" placeholder="Conte-nos resumidamente sobre o seu projeto." id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
             </div>
             <div class="text-center d-grid mt-1">
-              <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
+              <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
                 Enviar
                 <i class="fas fa-paper-plane"></i>
               </button>
