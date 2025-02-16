@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat WhatsApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        #sidebar {
+            width: 300px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+        #sidebar .contact {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        #sidebar .contact:hover {
+            background-color: #e9ecef;
+        }
+        #sidebar .contact img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        #chat {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        #chat-header {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+        #chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        #messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .message.bot {
+            align-items: flex-end;
+        }
+        .message .bubble {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .message.user .bubble {
+            background-color: #dcf8c6;
+        }
+        .message.bot .bubble {
+            background-color: #ececec;
+        }
+        #chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        #chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #chat-input button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #media-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #media-modal button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #file-input {
+            display: none; /* Oculta o input de arquivo padrão */
+        }
+        #file-button {
+            margin-left: 10px;
+            padding: 10px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h2 class="p-3">Chats</h2>
+        <ul id="contacts"></ul>
+    </div>
+
+    <!-- Chat Principal -->
+    <div id="chat">
+        <!-- Cabeçalho do Chat -->
+        <div id="chat-header">
+            <img id="contact-photo" src="https://placehold.co/40x40" alt="Foto do Contato">
+            <div>
+                <div id="contact-name">Selecione um chat</div>
+                <div id="contact-number"></div>
+            </div>
+        </div>
+
+        <!-- Mensagens -->
+        <div id="messages"></div>
+
+        <!-- Entrada de Mensagem -->
+        <div id="chat-input">
+            <input type="text" id="message-input" placeholder="Digite uma mensagem..." />
+            <button id="send-button">Enviar</button>
+            <label for="file-input" id="file-button">📁</label>
+            <input type="file" id="file-input" accept="image/*, video/*, application/pdf, .docx, .xlsx" />
+        </div>
+    </div>
+
+    <!-- Modal de Mídia -->
+    <div id="media-modal">
+        <button onclick="sendMedia('photo')">Foto</button>
+        <button onclick="sendMedia('video')">Vídeo</button>
+        <button onclick="sendMedia('pdf')">PDF</button>
+        <button onclick="sendMedia('docx')">DOCX</button>
+        <button onclick="sendMedia('xlsx')">XLSX</button>
+        <button onclick="closeMediaModal()">Fechar</button>
+    </div>
+
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        const socket = io("http://localhost:3000");
+
+        // Elementos do DOM
+        const contactsList = document.getElementById("contacts");
+        const chatHeader = document.getElementById("chat-header");
+        const contactPhoto = document.getElementById("contact-photo");
+        const contactName = document.getElementById("contact-name");
+        const contactNumber = document.getElementById("contact-number");
+        const messagesDiv = document.getElementById("messages");
+        const messageInput = document.getElementById("message-input");
+        const sendButton = document.getElementById("send-button");
+        const mediaModal = document.getElementById("media-modal");
+
+        const fileInput = document.getElementById("file-input");
+
+        fileInput.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            if (file && activeChat) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const fileData = event.target.result;
+                    socket.emit("sendFile", { to: activeChat.from, file: fileData, fileName: file.name, fileType: file.type });
+                };
+                reader.readAsDataURL(file); // Converte o arquivo para base64
+            }
+        });
+
+        // Variável para armazenar o chat ativo
+        let activeChat = null;
+
+        // Função para adicionar um contato à lista
+        function addContact(contact) {
+            const li = document.createElement("li");
+            li.className = "contact";
+            li.innerHTML = `
+                <img src="https://placehold.co/40x40" alt="Foto do Contato">
+                <div>
+                    <div>${contact.name}</div>
+                    <div>${contact.from}</div>
+                </div>
+            `;
+            li.addEventListener("click", () => openChat(contact));
+            contactsList.appendChild(li);
+        }
+
+        // Função para abrir um chat
+        function openChat(contact) {
+            activeChat = contact;
+            contactPhoto.src = "https://placehold.co/40x40";
+            contactName.textContent = contact.name;
+            contactNumber.textContent = contact.from;
+            messagesDiv.innerHTML = ""; // Limpa as mensagens anteriores
+
+            // Solicita o histórico de mensagens do chat selecionado
+            socket.emit("getMessages", contact.from);
+        }
+
+        // Função para adicionar uma mensagem à conversa
+        function addMessage(message) {
+            const messageElement = document.createElement("div");
+            messageElement.className = `message ${message.type}`;
+            messageElement.innerHTML = `
+                <div class="bubble">${message.body}</div>
+            `;
+            messagesDiv.appendChild(messageElement);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Rola para a última mensagem
+        }
+
+        // Evento para receber novas mensagens
+        socket.on("message", (message) => {
+            if (activeChat && message.from === activeChat.from) {
+                addMessage(message);
+            }
+        });
+
+        // Evento para receber o histórico de mensagens de um chat
+        socket.on("messages", (messages) => {
+            messagesDiv.innerHTML = ""; // Limpa as mensagens anteriores
+            messages.forEach(addMessage);
+        });
+
+        // Evento para receber a lista de chats
+        socket.on("chats", (chats) => {
+            chats.forEach(addContact);
+        });
+
+        // Evento para enviar uma mensagem manualmente
+        sendButton.addEventListener("click", () => {
+            const message = messageInput.value.trim();
+            if (message && activeChat) {
+                socket.emit("sendMessage", { to: activeChat.from, message });
+                messageInput.value = "";
+            }
+        });
+
+        // Funções para o modal de mídia
+        function openMediaModal() {
+            mediaModal.style.display = "block";
+        }
+
+        function closeMediaModal() {
+            mediaModal.style.display = "none";
+        }
+
+        function sendMedia(type) {
+            if (activeChat) {
+                socket.emit("sendMedia", { to: activeChat.from, type });
+                closeMediaModal();
+            }
+        }
+
+        // Inicialização: solicita a lista de chats ao servidor
+        socket.emit("getChats");
+    </script>
+</body>
+</html>
