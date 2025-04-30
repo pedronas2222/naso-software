@@ -1,962 +1,653 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2435M997Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-B2435M997Q');
-  </script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NASO Hub - Somos criadores de soluções personalizadas para o seu negócio - App, sites, sistemas e integrações
-  </title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASO HUB - Soluções Digitais Inovadoras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        naso: '#b82fea',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(184,47,234,0.1) 0%, rgba(255,255,255,1) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(184, 47, 234, 0.1), 0 10px 10px -5px rgba(184, 47, 234, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #b82fea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
 </head>
-
-<body>
-  <!-- ////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 1 - THE NAVBAR SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////-->
-  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="">
-        <!--h3><strong>NASO Hub</strong></h3-->
-        <img src="images/logo-naso-white.png" alt="logo image" style="width: 180px; height: 70px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Depoimentos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">Faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portifólio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contato</a>
-          </li>
-        </ul>
-        <button type="button" class="rounded-pill btn-rounded"
-          onclick="location.href='https://wa.me/5562991957693/?text=Olá,%20tenho%20interesse%20em%20um%20software%20personalizado.🎨'">
-          (62) 99195-7693
-          <span>
-            <i class="fa fa-whatsapp"></i>
-          </span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                            START SECTION 2 - THE INTRO SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-  <section id="home" class="intro-section">
-    <div class="container">
-      <div class="row align-items-center text-white">
-        <!-- START THE CONTENT FOR THE INTRO  -->
-        <div class="col-md-6 intros text-start">
-          <h1 class="display-2">
-            <span class="display-2--intro">Soluções personalizadas</span>
-            <span class="display-2--description lh-base">
-              Potencialize seu Negócio com Soluções Sob Medida da <b>NASO</b>. Agilidade e Inteligência para sua
-              Empresa. Conte com a Expertise da <b>NASO</b> para Soluções de Alto Valor.
-            </span>
-          </h1>
-          <button type="button" class="rounded-pill btn-rounded"
-            onclick="location.href='https://wa.me/5562991957693/?text=Olá,%20tenho%20interesse%20em%20um%20software%20personalizado.🎨'">Entre
-            em Contato
-            <span><i class="fas fa-arrow-right"></i></span>
-          </button>
-        </div>
-        <!-- START THE CONTENT FOR THE VIDEO -->
-        <div class="col-md-6 intros text-end">
-          <div class="video-box">
-            <img src="images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
-            <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
-              <span>
-                <i class="fas fa-play-circle"></i>
-              </span>
-              <span class="border-animation border-animation--border-1"></span>
-              <span class="border-animation border-animation--border-2"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1"
-        d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </section>
-
-  <!-- //////////////////////////////////////////////////////////////////////////////////////////////
-                             START SECTION 3 - THE CAMPANIES SECTION  
-////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-  <section id="campanies" class="campanies">
-    <div class="container">
-      <div class="row text-center">
-        <h4 class="fw-bold lead mb-3">Empresas líderes em
-          inovação estão conosco:</h4>
-        <div class="heading-line mb-5"></div>
-      </div>
-    </div>
-    <!-- START THE CAMPANIES CONTENT  -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm">
-            <img src="images/campanies/campany-1.png" alt="Campany 1 logo" title="Campany 1 Logo" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm">
-            <img src="images/campanies/campany-2.png" alt="Campany 2 logo" title="Campany 2 Logo" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm">
-            <img src="images/campanies/campany-3.png" alt="Campany 3 logo" title="Campany 3 Logo" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm">
-            <img src="images/campanies/campany-4.png" alt="Campany 4 logo" title="Campany 4 Logo" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm">
-            <img src="images/campanies/campany-5.png" alt="Campany 5 logo" title="Campany 5 Logo" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2">
-          <div class="campanies__logo-box shadow-sm">
-            <img src="images/campanies/campany-6.png" alt="Campany 6 logo" title="Campany 6 Logo" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- //////////////////////////////////////////////////////////////////////////////////////////////
-                         START SECTION 4 - THE SERVICES  
-///////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <section id="services" class="services">
-    <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold">Nossos Serviços</h1>
-        <div class="heading-line mb-1"></div>
-      </div>
-      <!-- START THE DESCRIPTION CONTENT  -->
-      <div class="row pt-2 pb-2 mt-0 mb-3">
-        <div class="col-md-6 border-right">
-          <div class="bg-white p-3">
-            <h2 class="fw-bold text-capitalize text-center">
-              Desde o Projeto Inicial até a Implantação, nossos serviços estão disponíveis em qualquer lugar e a
-              qualquer hora.
-            </h2>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="bg-white p-4 text-start">
-            <p class="fw-light">
-              Oferecemos soluções personalizadas para atender às suas necessidades específicas, garantindo qualidade,
-              eficiência e suporte contínuo. Conte conosco para impulsionar o sucesso do seu projeto, em todas as
-              etapas,
-              com dedicação e expertise.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- START THE CONTENT FOR THE SERVICES  -->
-    <div class="container">
-      <!-- START THE MARKETING CONTENT  -->
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__content">
-            <div class="icon d-block fas fa-robot"></div>
-            <h3 class="display-3--title mt-1">ChatBot Personalizado</h3>
-            <p class="lh-lg">
-              Conecte-se de forma única com seus clientes por meio de um chatbot exclusivo.
-              Transforme interações em experiências personalizadas e impulsione o engajamento em cada conversa.
-              Seu assistente virtual, moldado para atender às necessidades específicas do seu negócio
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary" id="testeAoVivo">Teste ao Vivo
-              <span><i class="fa fa-whatsapp"></i></span>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <div class="services__pic">
-            <img src="images/services/service-1.png" alt="marketing illustration" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <!-- START THE WEB DEVELOPMENT CONTENT  -->
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-          <div class="services__pic">
-            <img src="images/services/service-2.png" alt="web development illustration" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__content">
-            <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">Desenvolvimento Web</h3>
-            <p class="lh-lg">
-              Potencialize o seu negócio com desenvolvimento web de ponta e integração perfeita de APIs.
-              Construímos soluções digitais personalizadas que conectam e otimizam seus processos,
-              oferecendo uma experiência online excepcional para seus usuários.
-              Seja mais eficiente, seja mais conectado.
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary"
-              onclick="location.href='https://wa.me/5562991957693/?text=Olá,%20tenho%20interesse%20em%20um%20software%20personalizado.🎨'">Entre
-              em contato
-              <span><i class="fa fa-whatsapp"></i></span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- START THE CLOUD HOSTING CONTENT  -->
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__content">
-            <div class="icon d-block fas fa-cloud-upload-alt"></div>
-            <h3 class="display-3--title mt-1">Serviços em Nuvem</h3>
-            <p class="lh-lg">
-              Eleve a sua presença online com nossos serviços em nuvem.
-              Oferecemos um gerenciamento de hospedagem que prioriza a performance,
-              VPS (Servidor Virtual Privado) para flexibilidade máxima e VPN (Rede Privada Virtual)
-              para garantir a segurança dos seus dados.
-              Na nuvem, a sua presença digital é impulsionada pela tecnologia de ponta que oferecemos.
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary"
-              onclick="location.href='https://wa.me/5562991957693/?text=Olá,%20quero%20saber%20mais.'">Saiba Mais
-              <span><i class="fa fa-whatsapp"></i></span>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <div class="services__pic">
-            <img src="images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <!-- START THE CLOUD HOSTING CONTENT  -->
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-          <div class="services__pic">
-            <img src="images/services/service-4.jpg" alt="web development illustration" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__content">
-            <div class="icon d-block fas fa-network-wired"></div>
-            <h3 class="display-3--title mt-1">Redes de Computadores</h3>
-            <p class="lh-lg">
-              Potencialize a eficiência da sua infraestrutura com nossos serviços especializados em redes de
-              computadores.
-              Desenvolvemos arquiteturas personalizadas que elevam a conectividade e garantem o desempenho eficiente da
-              sua rede.
-              Desde a configuração e manutenção de equipamentos até a implementação de medidas avançadas de segurança,
-              oferecemos
-              soluções abrangentes para fortalecer a integridade da sua infraestrutura de TI.
-              Conte conosco para criar redes seguras, escaláveis e otimizadas, proporcionando uma experiência de
-              conectividade superior.
-              Transforme sua rede e impulsione o potencial do seu negócio.
-            </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary"
-              onclick="location.href='https://wa.me/5562991957693/?text=Olá,%20quero%20saber%20sobre%20os%20serviços%20de%20redes'">Entre
-              em contato
-              <span><i class="fa fa-whatsapp"></i></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <script>
-    document.getElementById('testeAoVivo').addEventListener('click', function () {
-      window.open('https://wa.me/5562991957693/?text=Teste%20Ao%20Vivo%20chatbot.', '_blank');
-    });
-  </script>
-
-
-
-  <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 5 - THE TESTIMONIALS  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <section id="testimonials" class="testimonials">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-      </path>
-    </svg>
-    <div class="container">
-      <div class="row text-center text-white">
-        <h1 class="display-3 fw-bold">Depoimentos</h1>
-        <hr style="width: 100px; height: 3px; " class="mx-auto">
-        <p class="lead pt-1">O que nossos clientes estão dizendo</p>
-      </div>
-
-      <!-- START THE CAROUSEL CONTENT  -->
-      <div class="row align-items-center">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- CAROUSEL ITEM 1 -->
-            <div class="carousel-item active">
-              <!-- testimonials card  -->
-              <div class="testimonials__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  A NASO foi fundamental para transformar nossas ideias em realidade.
-                  Seu compromisso com a qualidade e a inovação é evidente em cada linha de código.
-                  Além disso, a flexibilidade e a capacidade de adaptação da equipe tornaram o processo suave.
-                  Recomendo a NASO para qualquer projeto de desenvolvimento de software.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+<body class="bg-white text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-naso flex items-center justify-center text-white font-bold text-xl">NH</div>
+                    <a href="#" class="ml-3 text-2xl font-bold text-gray-800">NASO <span class="text-naso">HUB</span></a>
                 </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-naso transition">Início</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-naso transition">Serviços</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-naso transition">Sobre</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 hover:text-naso transition">Portfólio</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-naso transition">Contato</a>
+                </nav>
+                
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-naso hover:text-white transition">Início</a>
+                    <a href="#services" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-naso hover:text-white transition">Serviços</a>
+                    <a href="#about" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-naso hover:text-white transition">Sobre</a>
+                    <a href="#portfolio" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-naso hover:text-white transition">Portfólio</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-naso hover:text-white transition">Contato</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Transforme seu negócio com <span class="text-naso">tecnologia</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Soluções digitais personalizadas para impulsionar sua empresa no mercado digital. Inovação, qualidade e resultados que fazem a diferença.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-naso hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                            Fale Conosco
+                        </a>
+                        <a href="#services" class="border-2 border-naso text-naso hover:bg-naso hover:text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Nossos Serviços
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2282/2282188.png" alt="Desenvolvimento de Software" class="w-4/5 md:w-full max-w-md animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossos <span class="text-naso">Serviços</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Oferecemos soluções completas em desenvolvimento de software para atender todas as necessidades do seu negócio.
                 </p>
-              </div>
-              <!-- client picture  -->
-              <div class="testimonials__picture">
-                <img src="images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="testimonials__name">
-                <h3>Patrick Muriungi</h3>
-                <p class="fw-light">CEO & founder</p>
-              </div>
             </div>
-            <!-- CAROUSEL ITEM 2 -->
-            <div class="carousel-item">
-              <!-- testimonials card  -->
-              <div class="testimonials__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Contratamos a NASO para desenvolver um sistema personalizado para nossa empresa e ficamos
-                  impressionados com a
-                  qualidade e a entrega no prazo. A equipe foi extremamente profissional, entendendo nossas necessidades
-                  e
-                  fornecendo soluções inteligentes. Recomendo a NASO para quem busca serviços de desenvolvimento de
-                  software de alta qualidade.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-naso text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
+                    <p class="text-gray-600">
+                        Sites e aplicações web personalizadas, responsivas e de alto desempenho para destacar sua marca na internet.
+                    </p>
                 </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-naso text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aplicativos Móveis</h3>
+                    <p class="text-gray-600">
+                        Desenvolvimento de aplicativos nativos e híbridos para iOS e Android, proporcionando a melhor experiência ao usuário.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-naso text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-commerce</h3>
+                    <p class="text-gray-600">
+                        Plataformas de comércio eletrônico completas e seguras para expandir suas vendas para o mundo digital.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-naso text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sistemas Personalizados</h3>
+                    <p class="text-gray-600">
+                        Desenvolvimento de sistemas sob medida para atender às necessidades específicas do seu negócio.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-naso text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cloud Solutions</h3>
+                    <p class="text-gray-600">
+                        Soluções em nuvem para armazenamento, processamento e análise de dados com segurança e escalabilidade.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md service-card transition duration-300">
+                    <div class="w-16 h-16 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-naso text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Inteligência Artificial</h3>
+                    <p class="text-gray-600">
+                        Implementação de IA e machine learning para automatizar processos e extrair insights valiosos dos seus dados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2463/2463510.png" alt="Sobre a NASO HUB" class="w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sobre a <span class="text-naso">NASO HUB</span></h2>
+                    <p class="text-gray-600 mb-6">
+                        A NASO HUB nasceu da paixão por tecnologia e da vontade de transformar ideias em soluções digitais que realmente fazem a diferença no mercado.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nossa equipe é composta por especialistas apaixonados por desenvolvimento de software, dedicados a criar produtos de alta qualidade que atendam às necessidades específicas de cada cliente.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Acreditamos que a tecnologia deve ser acessível, funcional e, acima de tudo, trazer resultados tangíveis para os negócios. É por isso que nos comprometemos a entender profundamente cada projeto antes de colocar a mão na massa.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-check text-naso"></i>
+                            </div>
+                            <span class="font-medium">+100 Projetos</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-check text-naso"></i>
+                            </div>
+                            <span class="font-medium">Equipe Especializada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-check text-naso"></i>
+                            </div>
+                            <span class="font-medium">Tecnologia de Ponta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nosso <span class="text-naso">Portfólio</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Confira alguns dos projetos que desenvolvemos para nossos clientes e veja como podemos transformar seu negócio.
                 </p>
-              </div>
-              <!-- client picture  -->
-              <div class="testimonials__picture">
-                <img src="images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="testimonials__name">
-                <h3>Joana Matsudah</h3>
-                <p class="fw-light">Gerente Financeiro</p>
-              </div>
             </div>
-            <!-- CAROUSEL ITEM 3 -->
-            <div class="carousel-item">
-              <!-- testimonials card  -->
-              <div class="testimonials__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  A NASO Hub superou minhas expectativas em todos os aspectos.
-                  Desde o início do projeto até a implementação, a comunicação foi clara, e a equipe demonstrou grande
-                  expertise.
-                  Eles não apenas entregaram um sistema eficiente, mas também proporcionaram um suporte excepcional.
-                  Estamos muito satisfeitos com o resultado final.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-naso to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-shopping-bag text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Fashion</h3>
+                        <p class="text-gray-600 mb-4">Plataforma completa de e-commerce para uma marca de moda.</p>
+                        <span class="inline-block bg-naso bg-opacity-10 text-naso px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
+                    </div>
                 </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-naso to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-mobile text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">App de Delivery</h3>
+                        <p class="text-gray-600 mb-4">Aplicativo de delivery de comida para iOS e Android.</p>
+                        <span class="inline-block bg-naso bg-opacity-10 text-naso px-3 py-1 rounded-full text-sm font-medium">Mobile</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-naso to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sistema de Analytics</h3>
+                        <p class="text-gray-600 mb-4">Plataforma de análise de dados para negócios.</p>
+                        <span class="inline-block bg-naso bg-opacity-10 text-naso px-3 py-1 rounded-full text-sm font-medium">Business Intelligence</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-naso hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                    Quero um projeto como esses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-r from-naso to-purple-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que dizem <span class="text-white">nossos clientes</span></h2>
+                <p class="max-w-2xl mx-auto opacity-90">
+                    A satisfação dos nossos clientes é nossa maior recompensa.
                 </p>
-              </div>
-              <!-- client picture  -->
-              <div class="testimonials__picture">
-                <img src="images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="testimonials__name">
-                <h3>Clarice Ortega</h3>
-                <p class="fw-light">Consultoria de RH</p>
-              </div>
             </div>
-            <!-- CAROUSEL ITEM 4 -->
-            <div class="carousel-item">
-              <!-- testimonials card  -->
-              <div class="testimonials__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  O trabalho da NASO em nossos últimos projetos foi excepcional.
-                  A abordagem personalizada e a atenção aos detalhes destacam-se.
-                  Eles não apenas desenvolvem software, mas também entendem o contexto de negócios por trás dele.
-                  Isso faz toda a diferença na entrega de soluções que realmente agregam valor.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-xl font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold">João da Silva</h4>
+                            <p class="text-sm opacity-80">CEO, Fashion Store</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">
+                        "A NASO HUB transformou completamente nosso e-commerce. As vendas aumentaram em 300% após o novo site. Recomendo demais!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
                 </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-xl font-bold mr-4">AM</div>
+                        <div>
+                            <h4 class="font-bold">Ana Maria</h4>
+                            <p class="text-sm opacity-80">Diretora, Food Delivery</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">
+                        "O aplicativo que desenvolveram para nossa empresa superou todas as expectativas. A equipe da NASO é extremamente profissional e competente."
+                    </p>
+                    <div class="flex mt-4 text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-xl font-bold mr-4">CR</div>
+                        <div>
+                            <h4 class="font-bold">Carlos Rocha</h4>
+                            <p class="text-sm opacity-80">Gerente, Analytics Corp</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">
+                        "O sistema de BI que criaram nos proporcionou insights que mudaram completamente nossa estratégia de negócios. Parceria incrível!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em <span class="text-naso">Contato</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Pronto para transformar sua ideia em realidade? Preencha o formulário abaixo e nossa equipe entrará em contato em breve.
                 </p>
-              </div>
-              <!-- client picture  -->
-              <div class="testimonials__picture">
-                <img src="images/testimonials/client-4.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="testimonials__name">
-                <h3>Fernando Lima</h3>
-                <p class="fw-light">CEO & Founder</p>
-              </div>
             </div>
-          </div>
-          <div class="text-center">
-            <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
-              data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            </button>
-            <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button"
-              data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </section>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                       START SECTION 6 - THE FAQ 
-//////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <section id="faq" class="faq">
-    <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold text-uppercase">faq</h1>
-        <div class="heading-line"></div>
-        <p class="lead">Perguntas frequentes</p>
-      </div>
-      <!-- ACCORDION CONTENT  -->
-      <div class="row mt-5">
-        <div class="col-md-12">
-          <div class="accordion" id="accordionExample">
-            <!-- ACCORDION ITEM 1 -->
-            <div class="accordion-item shadow mb-3">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  Como funciona a encomenda de software?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  A encomenda de software na <strong>NASO Hub</strong> é um processo simplificado e eficiente. Basta
-                  seguir alguns passos:
-                  <br><br>
-
-                  <strong>Consulta Inicial:</strong>
-                  Entre em contato conosco para discutir suas necessidades e objetivos.
-                  <br>
-
-                  <strong>Análise de Requisitos:</strong>
-                  Nossa equipe especializada realizará uma análise detalhada dos requisitos do seu projeto.
-                  <br>
-
-                  <strong>Proposta Personalizada:</strong>
-                  Você receberá uma proposta personalizada, detalhando o escopo do projeto, prazos e custos associados.
-                  <br>
-
-                  <strong>Desenvolvimento Iterativo:</strong>
-                  Iniciamos o desenvolvimento do software em etapas, permitindo iterações e feedback contínuo.
-                  <br>
-
-                  <strong>Testes e Validação:</strong>
-                  Realizamos testes rigorosos para garantir a qualidade e a funcionalidade esperada.
-                  <br>
-
-                  <strong>Entrega e Suporte:</strong>
-                  O software finalizado é entregue, e oferecemos suporte contínuo para garantir a satisfação do cliente.
-                  <br>
-
-                  <strong>Atualizações Futuras:</strong>
-                  Mantemos uma comunicação aberta para futuras atualizações ou personalizações necessárias.
-                  <br>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-naso focus:border-naso outline-none transition" placeholder="Seu nome">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-naso focus:border-naso outline-none transition" placeholder="seu@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-naso focus:border-naso outline-none transition" placeholder="(00) 00000-0000">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Serviço de Interesse</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-naso focus:border-naso outline-none transition">
+                                <option value="">Selecione um serviço</option>
+                                <option value="web">Desenvolvimento Web</option>
+                                <option value="mobile">Aplicativos Móveis</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="systems">Sistemas Personalizados</option>
+                                <option value="cloud">Cloud Solutions</option>
+                                <option value="ai">Inteligência Artificial</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-naso focus:border-naso outline-none transition" placeholder="Conte-nos sobre seu projeto..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-naso hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                            Enviar Mensagem
+                        </button>
+                    </form>
                 </div>
-              </div>
-            </div>
-            <!-- ACCORDION ITEM 2 -->
-            <div class="accordion-item shadow mb-3">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Onde meu software será hospedado?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Na <strong>NASO</strong>, oferecemos opções flexíveis de hospedagem para atender às necessidades
-                  específicas do seu projeto.
-                  Podemos utilizar servidores dedicados, serviços em nuvem confiáveis ou qualquer outra opção que melhor
-                  se
-                  adapte aos requisitos do seu software.
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-naso"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Endereço</h4>
+                                    <p class="text-gray-600">Av. Paulista, 1000 - São Paulo, SP</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope text-naso"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">E-mail</h4>
+                                    <p class="text-gray-600">contato@nasohub.com.br</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-naso"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Telefone</h4>
+                                    <p class="text-gray-600">(11) 99999-9999</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-clock text-naso"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horário de Atendimento</h4>
+                                    <p class="text-gray-600">Segunda a Sexta: 9h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Siga-nos nas redes sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center text-naso hover:bg-naso hover:text-white transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center text-naso hover:bg-naso hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center text-naso hover:bg-naso hover:text-white transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-naso bg-opacity-10 rounded-full flex items-center justify-center text-naso hover:bg-naso hover:text-white transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <!-- ACCORDION ITEM 3 -->
-            <div class="accordion-item shadow mb-3">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  A hospedagem está incluída no serviço de desenvolvimento de software?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Sim, dependendo do acordo, a hospedagem pode ser incluída nos serviços de desenvolvimento.
-                  Iremos discutir as opções disponíveis durante a fase inicial de consulta para garantir
-                  uma solução completa e alinhada às suas necessidades.
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-xl shadow-md p-8 md:p-10 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-xl md:text-2xl font-bold mb-2">Assine nossa newsletter</h3>
+                        <p class="text-gray-600">Receba as últimas novidades sobre tecnologia e soluções digitais diretamente no seu e-mail.</p>
+                    </div>
+                    <div class="md:w-1/3 md:pl-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Seu e-mail" class="flex-grow px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-naso focus:border-naso outline-none transition">
+                            <button class="bg-naso hover:bg-purple-700 text-white font-semibold px-6 rounded-r-lg transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <!-- ACCORDION ITEM 4 -->
-            <div class="accordion-item shadow mb-3">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Há algum custo adicional para a hospedagem?
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Os custos de hospedagem podem variar com base na infraestrutura escolhida.
-                  Durante a fase de proposta, detalharemos os custos associados
-                  à hospedagem, garantindo total transparência em relação aos investimentos necessários.
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-naso flex items-center justify-center text-white font-bold text-lg">NH</div>
+                        <a href="#" class="ml-3 text-xl font-bold">NASO <span class="text-naso">HUB</span></a>
+                    </div>
+                    <p class="text-gray-400">
+                        Soluções digitais personalizadas para impulsionar seu negócio através de tecnologia inovadora e funcional.
+                    </p>
                 </div>
-              </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-naso transition">Início</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-naso transition">Serviços</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-naso transition">Sobre</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-naso transition">Portfólio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-naso transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-naso transition">Desenvolvimento Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-naso transition">Aplicativos Móveis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-naso transition">E-commerce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-naso transition">Sistemas Personalizados</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-naso transition">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-naso mr-2"></i>
+                            <span class="text-gray-400">Av. Paulista, 1000 - SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-naso mr-2"></i>
+                            <span class="text-gray-400">contato@nasohub.com.br</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-naso mr-2"></i>
+                            <span class="text-gray-400">(11) 99999-9999</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
-                              START SECTION 7 - THE PORTFOLIO  
-//////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="row text-center mt-5">
-        <h1 class="display-3 fw-bold text-capitalize">Transformando Ideias em Realidade</h1>
-        <div class="heading-line"></div>
-        <p class="lead">
-          Na <b>NASO Hub</b> , transformamos ideias em realidade digital. Descubra nossos projetos e leve sua visão para
-          o próximo nível.
-        </p>
-      </div>
-      <!-- FILTER BUTTONS  -->
-      <div class="row mt-5 mb-4 g-3 text-center">
-        <div class="col-md-12">
-          <button class="btn btn-outline-primary" type="button">Tudo</button>
-          <button class="btn btn-outline-primary" type="button">Sistemas Web</button>
-          <button class="btn btn-outline-primary" type="button">Chatbot</button>
-          <button class="btn btn-outline-primary" type="button">Marketing</button>
-        </div>
-      </div>
-
-      <!-- START THE PORTFOLIO ITEMS  -->
-      <div class="row">
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/hotelier/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-1.jpg" alt="portfolio 1 image" title="portfolio 1 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>HOTEL HOTELIER</h4>
-                <p>Desenvolvimento de Site</p>
-              </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 NASO HUB. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-naso transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-naso transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-naso transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-naso transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/hotelier/index.html'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-2.jpg" alt="portfolio 2 image" title="portfolio 2 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>HOTEL KETO</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/gym2/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-3.jpg" alt="portfolio 3 image" title="portfolio 3 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>FITNESS GYM</h4>
-                <p>Desenvolvimento Landing Pages</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/health-center/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-4.jpg" alt="portfolio 4 image" title="portfolio 4 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>SITE CLÍNICA</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/MediCio/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-5.jpg" alt="portfolio 5 image" title="portfolio 5 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>MEDCIO HOSPITAL</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/MediLab/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-6.jpg" alt="portfolio 6 image" title="portfolio 6 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>MEDI LABORATÓRIO</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/famms/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-7.jpg" alt="portfolio 7 image" title="portfolio 7 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>FAMMS ECOMMERCE</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/rentiz/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-8.jpg" alt="portfolio 8 image" title="portfolio 8 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>RENTIZ IMOBILIÁRIA</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" onclick="location.href='https://themewagon.github.io/pollowmart/'">
-          <div class="portfolio-box shadow">
-            <img src="images/portfolio/portfolio-9.png" alt="portfolio 9 image" title="portfolio 9 picture"
-              class="img-fluid">
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>POLLOWMART</h4>
-                <p>Desenvolvimento Web</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////
-              START SECTION 8 - GET STARTED  
-/////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <section id="contact" class="get-started">
-    <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold text-capitalize">Comece agora</h1>
-        <div class="heading-line"></div>
-        <p class="lh-lg">
-          Você está a um passo de transformar suas ideias em realidade!
-          Nossa equipe na <strong>NASO</strong> está pronta para entender suas necessidades e oferecer soluções
-          personalizadas que impulsionarão o seu negócio.
-        </p>
-      </div>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
 
-      <!-- START THE CTA CONTENT  -->
-      <div class="row text-white">
-        <div class="col-12 col-lg-6 gradient shadow p-3">
-          <div class="cta-info w-100">
-            <h4 class="display-4 fw-bold">100% Satisfação Garantida</h4>
-            <p class="lh-lg">
-              Na <strong>NASO</strong>, a satisfação do cliente é nossa principal prioridade.
-              Estamos comprometidos em superar expectativas, oferecendo soluções sob medida que não apenas atendem, mas
-              excedem suas necessidades.
-              Seu sucesso é o nosso sucesso, e trabalhamos incansavelmente para garantir que cada interação com nossos
-              serviços seja uma experiência 100% satisfatória.
-              Conte conosco para elevar seu negócio a novos patamares de excelência e satisfação.
-            </p>
-            <h3 class="display-3--brief">Qual será o próximo passo?</h3>
-            <ul class="cta-info__list">
-              <li>Vamos discutir suas necessidades e objetivos.</li>
-              <li>Faremos uma análise dos requisitos.</li>
-              <li>Enviaremos uma proposta personalizada</li>
-              <li>Criaremos um MVP (Produto Minímo Viável)</li>
-              <li>Faremos testes e validações.</li>
-              <li>Entrega e Suporte.</li>
-              <li>Atualizações Futuras.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6 bg-white shadow p-3">
-          <div class="form w-100 pb-2">
-            <h4 class="display-3--title mb-5">Inicie seu Projeto</h4>
-            <form action="https://api.sheetmonkey.io/form/hjNXFXMykNGZSWLQpExDLb" method="post" class="row">
-              <input type="hidden" name="Canal" value="site-naso">
-              <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
-              <div class="col-lg-6 col-md mb-3">
-                <input type="text" name="Name" placeholder="Nome" id="inputFirstName"
-                  class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-6 col-md mb-3">
-                <input type="number" name="WhatsApp" placeholder="WhatsApp" id="inputLastName"
-                  class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-12 mb-3">
-                <input type="email" name="Email" placeholder="E-mail" id="inputEmail"
-                  class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-12 mb-3">
-                <textarea name="Mensagem" placeholder="Conte-nos resumidamente sobre o seu projeto." id="message"
-                  rows="8" class="shadow form-control form-control-lg"></textarea>
-              </div>
-              <div class="text-center d-grid mt-1">
-                <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
-                  Enviar
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-  <!-- ///////////////////////////////////////////////////////////////////////////////////////////
-                           START SECTION 9 - THE FOOTER  
-///////////////////////////////////////////////////////////////////////////////////////////////-->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <!-- CONTENT FOR THE MOBILE NUMBER  -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-              <path d="M15 7a2 2 0 0 1 2 2" />
-              <path d="M15 3a6 6 0 0 1 6 6" />
-            </svg>
-          </div>
-          <div class="contact-box__info">
-            <a href="https://wa.me/5562991957693/?text=Olá!%20quero%20saber%20sobre%20os%20serviços\n%20Vim%20através%20do%20Site."
-              class="contact-box__info--title">(62) 99195-7693</a>
-            <p class="contact-box__info--subtitle"> Suporte Online</p>
-          </div>
-        </div>
-        <!-- CONTENT FOR EMAIL  -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <polyline points="3 9 12 15 21 9 12 3 3 9" />
-              <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-              <line x1="3" y1="19" x2="9" y2="13" />
-              <line x1="15" y1="13" x2="21" y2="19" />
-            </svg>
-          </div>
-          <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">nasohub@gmail.com</a>
-            <p class="contact-box__info--subtitle">Contato</p>
-          </div>
-        </div>
-        <!-- CONTENT FOR LOCATION  -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <line x1="18" y1="6" x2="18" y2="6.01" />
-              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
-              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
-              <line x1="9" y1="4" x2="9" y2="17" />
-              <line x1="15" y1="15" x2="15" y2="20" />
-            </svg>
-          </div>
-          <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">Ourilândia do Norte, Pará</a>
-            <p class="contact-box__info--subtitle">Endereço</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- START THE SOCIAL MEDIA CONTENT  -->
-    <div class="footer-sm" style="background-color: #212121;">
-      <div class="container">
-        <div class="row py-4 text-center text-white">
-          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-            Conecte-se conosco nas redes sociais
-          </div>
-          <div class="col-lg-7 col-md-6">
-            <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
-            <a href="https://github.com/pedronas2222/naso-software"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/company/naso-hub"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/nasohub"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- START THE CONTENT FOR THE CAMPANY INFO -->
-    <div class="container mt-5">
-      <div class="row text-white justify-content-center mt-3 pb-3">
-        <div class="col-12 col-sm-6 col-lg-6 mx-auto">
-          <h5 class="text-capitalize fw-bold">NASO Hub</h5>
-          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <p class="lh-lg">
-            Na NASO Hub, acreditamos no poder transformador da tecnologia.
-            Somos dedicados a criar soluções inovadoras que impulsionam o crescimento e o sucesso dos nossos clientes.
-          </p>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
-          <h5 class="text-capitalize fw-bold">Produtos</h5>
-          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <ul class="list-inline campany-list">
-            <li><a href="#">Aurora Cotação</a></li>
-            <li><a href="#">Cronus Empregador</a></li>
-            <li><a href="#">Chatbot Personal</a></li>
-            <li><a href="#">Cronus RH</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
-          <h5 class="text-capitalize fw-bold">Links Úteis</h5>
-          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <ul class="list-inline campany-list">
-            <li><a href="#"> Área Cliente</a></li>
-            <li><a href="#"> Afiliados</a></li>
-            <li><a href="#"> Criar uma conta</a></li>
-            <li><a href="#"> Ajuda</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
-          <h5 class="text-capitalize fw-bold">Contato</h5>
-          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <ul class="list-inline campany-list">
-            <li><a href="#">Suporte</a></li>
-            <li><a href="#">Comercial</a></li>
-            <li><a href="#">Desenvolvedores</a></li>
-            <li><a href="#">Trabalhe Conosco</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- START THE COPYRIGHT INFO  -->
-    <div class="footer-bottom pt-5 pb-5">
-      <div class="container">
-        <div class="row text-center text-white">
-          <div class="col-12">
-            <div class="footer-bottom__copyright">
-              &COPY; Copyright 2024 <a href="#">NASO Hub</a> | 57.948.723/0001-34<br><br>
-
-              Distribuido por <a href="https://github.com/pedronas2222" target="_blank">NASO Hub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- BACK TO TOP BUTTON  -->
-  <a href="#" class="shadow btn-primary rounded-circle back-to-top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
-
-
-
-
-  <script src="assets/vendors/js/glightbox.min.js"></script>
-
-  <script type="text/javascript">
-    const lightbox = GLightbox({
-      'touchNavigation': true,
-      'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
-      'type': 'video',
-      'source': 'youtube', //vimeo, youtube or local
-      'width': 900,
-      'autoPlayVideos': 'true',
-    });
-
-  </script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to a server
+                // For this example, we'll just show an alert
+                alert('Obrigado por entrar em contato! Nossa equipe responderá em breve.');
+                
+                // Reset form
+                this.reset();
+            });
+        }
+    </script>
 </body>
-
 </html>
